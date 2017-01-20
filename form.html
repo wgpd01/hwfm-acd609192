@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>登入系統與申請帳密</title>
+        <script>
+            function inin(){
+                if(reg.account.value == ""){
+                    alert("未輸入帳號");
+                }
+                else if(reg.account.value != "accoun"){
+                    alert("未有此帳號");
+                }
+                else if(reg.password.value == ""){
+                    alert("未輸入密碼");
+                }
+                else if(reg.password.value != "password"){
+                    alert("密碼錯誤");
+                }
+                else{
+                    alert("恭喜登入成功，但是網頁暫時關閉，請見諒");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>登入系統</h1>
+        <form name="reg" method="post" action="">
+            帳號:<input name="account" type="text" ><h3>試驗帳號:accoun</h3>
+            密碼:<input name="password" type="text"><h3>試驗密碼:password</h3>
+            <button onclick="inin()">登入</button>
+        </form>
+        <h1>申請帳密</h1>
+        <p>
+            <button type="button" onClick="self.location.href='application.html'">申請帳密</button>
+        </p>
+    </body>
+</html>

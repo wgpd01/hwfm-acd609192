@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <script>
+            function application(){
+                if(reg.username1.value == ""){
+                    alert("未輸入姓氏");
+                }
+                else if(reg.username2.value == ""){
+                    alert("未輸入名字");
+                }
+                else if(!reg.sex[0].checked && !reg.sex[1].checked)
+                {
+                         alert("未選擇性別");
+                }
+                else if(reg.useraccount.value == ""){
+                    alert("未輸入帳號");
+                }
+                else if(reg.userpassword.value == ""){
+                    alert("未輸入密碼");
+                }
+                else if(reg.repassword.value == ""){
+                    alert("未輸入確認密碼");
+                }
+                else if(reg.userpassword.value != reg.repassword.value){
+                    alert("密碼確認錯誤");
+                }
+                else{
+                    alert("恭喜申請成功，但是會員已滿，暫不收新會員");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;申請資料填寫</h1>
+        <form name="reg" method="post" action="">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓:<input type="text" name="username1"/></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名字:<input type="text" name="username2"/></p>
+            <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="男">男
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="女">女
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帳號:<input type="text" name="useraccount" placeholder="請輸入帳號"/></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密碼:<input type="text" name="userpassword" placeholder="請輸入密碼"/></p>
+            <p>密碼確認:<input type="text" name="repassword" placeholder="再次輸入密碼"/></p>
+            <button type="button" onClick="application()">申請</button>
+        </form>
+        <button type="button" onClick="self.location.href='form.html'">回登入頁面</button>
+    </body>
+</html>
